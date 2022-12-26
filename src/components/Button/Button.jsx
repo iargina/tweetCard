@@ -1,9 +1,11 @@
 import css from './Button.module.css';
 import { Component } from 'react';
+
 export class Button extends Component {
   state = {
     followingOption: null,
   };
+
   static getDerivedStateFromProps(props, state) {
     if (props.following !== state.followingOption) {
       return {

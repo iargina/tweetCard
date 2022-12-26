@@ -13,6 +13,7 @@
   outline: none;
   border: none;
 }
+
 .buttonFollowing {
   composes: button;
   background: #5cd3a8;

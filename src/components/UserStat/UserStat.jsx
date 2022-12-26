@@ -1,4 +1,5 @@
 import css from './UserStat.module.css';
+
 export const UserStat = ({ followers, tweets }) => {
   return (
     <div className={css.userTextWrap}>
