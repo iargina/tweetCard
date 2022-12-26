@@ -9,8 +9,9 @@ Example cards created for Twitter, but can be adapted for any social network
 
 - Decorative part (ImageBlock component)
 - User information (UserWrap component),inside of which
-  > Client's avatar o Statistical information about the number of tweets,
-  > followers Button with the ability to subscribe
+  - Client's avatar.
+  - Statistical information about the number of tweets,followers.
+  - Button with the ability to subscribe
 
 ### Functionality:
 
