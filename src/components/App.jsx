@@ -1,66 +1,53 @@
 import { Component } from 'react';
-import { Button } from './Button/Button';
-import { UserStat } from './UserStat/UserStat';
-import { Line } from './Line/Line';
-import { Avatar } from './Avatar/Avatar';
-import { UserWrap } from './UserWrap/UserWrap';
 import { Container } from './Container/Container';
 import { Card } from './Card/Card';
-import { ImageBlock } from './ImageBlock/ImageBlock';
+import usersArr from 'data/users.json';
 
 export class App extends Component {
   state = {
-    tweets: 777,
-    followers: 100500,
-    following: null,
+    users: usersArr.map(user => {
+      return { ...user, following: false };
+    }),
   };
 
   componentDidMount = () => {
-    const followingStatus = localStorage.getItem('followingStatus');
-    const followers = localStorage.getItem('Followers');
-    if (!followers) {
+    const users = localStorage.getItem('Users');
+    if (!users) {
       return;
     }
     this.setState({
-      following: JSON.parse(followingStatus),
-      followers: JSON.parse(followers),
+      users: JSON.parse(users),
     });
   };
 
   componentDidUpdate = (_, prevState) => {
-    if (prevState.following !== this.state.following) {
-      localStorage.setItem(
-        'followingStatus',
-        JSON.stringify(this.state.following)
-      );
-      localStorage.setItem('Followers', JSON.stringify(this.state.followers));
+    if (JSON.stringify(prevState.users) !== JSON.stringify(this.state.users)) {
+      localStorage.setItem('Users', JSON.stringify(this.state.users));
     }
   };
 
-  onClick = () => {
+  onClick = id => {
     this.setState(prevState => {
       return {
-        followers: prevState.following
-          ? prevState.followers - 1
-          : prevState.followers + 1,
-        following: !prevState.following,
+        users: prevState.users.map(user => {
+          if (user.id !== id) {
+            return user;
+          }
+          return {
+            ...user,
+            followers: user.following ? user.followers - 1 : user.followers + 1,
+            following: !user.following,
+          };
+        }),
       };
     });
   };
 
   render() {
-    const { tweets, followers, following } = this.state;
+    const { users } = this.state;
     return (
       <Container>
-        <Card>
-          <ImageBlock />
-          <UserWrap>
-            <Line />
-            <Avatar />
-            <UserStat tweets={tweets} followers={followers} />
-            <Button onClick={this.onClick} following={following} />
-          </UserWrap>
-        </Card>
+        <Card users={users} onClick={this.onClick} />
       </Container>
     );
   }

@@ -1,16 +1,18 @@
+# User-card widget
+
 The application allows you to render user cards from various social networks.
 Will be useful as a widget on the site
 
-Example card created for Twitter, but can be adapted for any social network
+Example cards created for Twitter, but can be adapted for any social network
 
-The card consists of
+### The user-card consists of
 
 - Decorative part (ImageBlock component)
-- User information (UserWrap component), inside of which o Client's avatar o
-  Statistical information about the number of tweets, followers o Button with
-  the ability to subscribe
+- User information (UserWrap component),inside of which
+  > Client's avatar o Statistical information about the number of tweets,
+  > followers Button with the ability to subscribe
 
-Functionality:
+### Functionality:
 
 - When the page first loads, the user's card is displayed with data about
   tweets/subscribers taken from the basic data about the user

@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "user": "Kate Parkinson",
+    "tweets": 777,
+    "followers": 100500,
+    "avatar": "https://res.cloudinary.com/dsbfzhkvq/image/upload/v1672068383/6_k4b4bi.png"
+  },
+  {
+    "id": 2,
+    "user": "Catrine Tip",
+    "tweets": 258,
+    "followers": 11700,
+    "avatar": "https://res.cloudinary.com/dsbfzhkvq/image/upload/v1672068383/4_h6biue.png"
+  },
+  {
+    "id": 3,
+    "user": "Steve Car",
+    "tweets": 3,
+    "followers": 250,
+    "avatar": "https://res.cloudinary.com/dsbfzhkvq/image/upload/v1672068383/2_cdtoyr.png"
+  },
+  {
+    "id": 4,
+    "user": "Tim Park",
+    "tweets": 4245,
+    "followers": 47850,
+    "avatar": "https://res.cloudinary.com/dsbfzhkvq/image/upload/v1672068383/1_asttxt.png"
+  },
+  {
+    "id": 5,
+    "user": "Natali Park",
+    "tweets": 35,
+    "followers": 32841,
+    "avatar": "https://res.cloudinary.com/dsbfzhkvq/image/upload/v1672068383/3_igszig.png"
+  }
+]
