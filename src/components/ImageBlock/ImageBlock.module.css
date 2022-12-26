@@ -1,0 +1,16 @@
+.imageWrap {
+  height: 217px;
+  padding-top: 34px;
+  padding-right: 45px;
+  padding-left: 52px;
+  padding-bottom: 0;
+}
+.backgroundImage {
+  margin: 0;
+}
+.logo {
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  opacity: 0.3;
+}
