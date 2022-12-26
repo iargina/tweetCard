@@ -10,7 +10,7 @@ export class App extends Component {
             className={css.backgroundImage}
             alt="background"
           />
-          <img src="images/logo.png" />
+          <img src="images/logo.png" className={css.logo} alt="logo" />
         </div>
       </div>
     );

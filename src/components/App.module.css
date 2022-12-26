@@ -17,3 +17,8 @@
 .backgroundImage {
   width: 100%;
 }
+.logo {
+  position: absolute;
+  left: 24px;
+  top: 24px;
+}
