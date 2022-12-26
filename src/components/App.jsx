@@ -1,16 +1,18 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
-};
+import { Component } from 'react';
+import css from './App.module.css';
+export class App extends Component {
+  render() {
+    return (
+      <div className={css.cardWrap}>
+        <div className={css.imageWrap}>
+          <img
+            src="images/background.png"
+            className={css.backgroundImage}
+            alt="background"
+          />
+          <img src="images/logo.png" />
+        </div>
+      </div>
+    );
+  }
+}
