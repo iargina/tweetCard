@@ -11,7 +11,7 @@ export class App extends Component {
   state = {
     tweets: 777,
     followers: 100500,
-    following: false,
+    following: null,
   };
   onClick = () => {
     this.setState(prevState => {
@@ -24,6 +24,27 @@ export class App extends Component {
     });
   };
 
+  componentDidMount = () => {
+    const followingStatus = localStorage.getItem('followingStatus');
+    const followers = localStorage.getItem('Followers');
+    if (!followers) {
+      return;
+    }
+    this.setState({
+      following: JSON.parse(followingStatus),
+      followers: JSON.parse(followers),
+    });
+  };
+
+  componentDidUpdate = (_, prevState) => {
+    if (prevState.following !== this.state.following) {
+      localStorage.setItem(
+        'followingStatus',
+        JSON.stringify(this.state.following)
+      );
+      localStorage.setItem('Followers', JSON.stringify(this.state.followers));
+    }
+  };
   render() {
     const { tweets, followers, following } = this.state;
     return (
