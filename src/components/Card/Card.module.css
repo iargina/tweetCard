@@ -1,5 +1,12 @@
-.cardWrap {
+.cardList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.cardItem {
   position: relative;
+  list-style: none;
   width: 454px;
   background: linear-gradient(
     114.99deg,

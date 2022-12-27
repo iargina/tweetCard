@@ -4,9 +4,17 @@ import logo from '../../images/logo.png';
 
 export const ImageBlock = () => {
   return (
-    <div className={css.imageWrap}>
-      <img src={background} className={css.backgroundImage} alt="background" />
-      <img src={logo} className={css.logo} alt="logo" />
-    </div>
+    <ul className={css.imageWrap}>
+      <li className={css.imageItem}>
+        <img
+          src={background}
+          className={css.backgroundImage}
+          alt="background"
+        />
+      </li>
+      <li className={css.imageItem}>
+        <img src={logo} className={css.logo} alt="logo" />
+      </li>
+    </ul>
   );
 };
